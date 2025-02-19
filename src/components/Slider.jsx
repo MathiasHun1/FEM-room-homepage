@@ -2,7 +2,7 @@ import styles from './Slider.module.scss';
 
 import Stepper from './Stepper';
 
-const Slider = ({ currentSlides, direction, slideLeft, slideRight }) => {
+const Slider = ({ currentSlides, direction }) => {
   return (
     <div className={styles.slider}>
       {currentSlides.map((slide) => (
@@ -10,8 +10,6 @@ const Slider = ({ currentSlides, direction, slideLeft, slideRight }) => {
           <img src={slide.urlDesktop} alt="" />
         </picture>
       ))}
-
-      <Stepper onStepRight={slideRight} onStepLeft={slideLeft} />
     </div>
   );
 };

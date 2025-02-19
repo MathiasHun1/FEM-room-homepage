@@ -19,4 +19,17 @@
 
 .article_container {
   position: relative;
+  padding-inline: 6vw;
+  padding-top: 8vw;
+
+  .title {
+    font-size: calc(48rem / 16);
+    line-height: 1em;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+  }
+
+  .text {
+    color: $clr-DarkGray;
+  }
 }

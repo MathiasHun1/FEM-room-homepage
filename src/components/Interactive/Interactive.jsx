@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import Slider from '../Slider';
 import Navbar from '../Navbar';
+import Stepper from '../Stepper';
 
 const Interactive = () => {
   const [mainSlide, setMainSlide] = useState(0);
@@ -44,8 +45,9 @@ const Interactive = () => {
       </div>
 
       <div className={styles.article_container}>
-        <h1>{currentTitle}</h1>
-        <p>{currentText}</p>
+        <h1 className={styles.title}>{currentTitle}</h1>
+        <p className={styles.text}>{currentText}</p>
+        <Stepper onStepRight={slideRight} onStepLeft={slideLeft} />
       </div>
     </section>
   );
