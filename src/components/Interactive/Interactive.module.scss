@@ -1,0 +1,22 @@
+@use '../../styles/config/' as *;
+
+.interactive {
+  width: 100%;
+  border: 2px solid;
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  flex: calc(2 / 3);
+
+  overflow: hidden;
+}
+
+.slider_container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid;
+}
+
+.article_container {
+  position: relative;
+}

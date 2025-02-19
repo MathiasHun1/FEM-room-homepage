@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+// Colors
+$clr-DarkGray: hsl(0, 0%, 63%);
+$clr-Black: hsl(0, 0%, 0%);
+$clr-White: hsl(0, 0%, 100%);
+$clr-Very-Dark-Gray: hsl(0, 0%, 27%);
+
+// Fonts
+$ff-base: 'Spartan', sans-serif;
+
+@mixin font-base {
+  font-family: $ff-base;
+  font-size: 1rem;
+}
+
+@mixin font-base-regular {
+  font-family: $ff-base;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@mixin font-base-semi-bold {
+  font-family: $ff-base;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@mixin font-base-bold {
+  font-family: $ff-base;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+// Breakpoints
+$breakpoint-tablet: 600px;

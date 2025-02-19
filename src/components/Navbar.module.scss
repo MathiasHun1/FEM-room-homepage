@@ -1,0 +1,49 @@
+@use '../styles/config/' as *;
+
+$color: $clr-White;
+
+.nav_element {
+  color: $color;
+  display: flex;
+  align-items: start;
+  gap: 3rem;
+  width: fit-content;
+  position: absolute;
+  top: 60px;
+  left: 2rem;
+}
+
+.navlist {
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.navlist__listitem {
+  padding: 0;
+  height: 100%;
+  line-height: 1;
+  height: 1.5em;
+  transition: box-shadow 150ms ease;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 0 0 $color;
+    cursor: pointer;
+  }
+}
+
+.image_wrapper {
+  width: 6rem;
+
+  img {
+    width: 100%;
+  }
+}

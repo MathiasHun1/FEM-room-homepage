@@ -1,0 +1,18 @@
+@use '../styles/config/' as *;
+
+.stepper {
+  width: 10rem;
+  height: 5rem;
+  background: $clr-Black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.left_arrow,
+.right_arrow {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
