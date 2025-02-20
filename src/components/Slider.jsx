@@ -1,9 +1,7 @@
 import styles from './Slider.module.scss';
 
-import Stepper from './Stepper';
-
-const Slider = ({ mainSlide, secondSlide, direction, heroes }) => {
-  const currentSlides = [heroes[mainSlide], heroes[secondSlide]];
+const Slider = ({ mainIndex, secondIndex, direction, heroes }) => {
+  const currentSlides = [heroes[mainIndex], heroes[secondIndex]];
 
   return (
     <div className={styles.slider}>

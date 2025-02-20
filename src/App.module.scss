@@ -8,27 +8,3 @@
 
   @include font-base-regular;
 }
-
-.fix {
-  width: 100%;
-  display: grid;
-}
-
-.interactive {
-  flex: calc(2 / 3);
-  grid-template-columns: 1fr 40%;
-}
-
-.fix {
-  flex: calc(1 / 3);
-}
-
-.slider_container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.article_container {
-  position: relative;
-}

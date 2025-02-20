@@ -1,63 +1,55 @@
 import styles from './Interactive.module.scss';
 import { data as heroes } from '../../data';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Slider from '../Slider';
 import Navbar from '../Navbar';
 import Stepper from '../Stepper';
 
 const Interactive = () => {
-  const [mainSlide, setMainSlide] = useState(0);
-  const [secondSlide, setSecondSlide] = useState(1);
+  const [mainIndex, setmainIndex] = useState(0);
+  const [secondIndex, setsecondIndex] = useState(1);
   const [direction, setDirection] = useState('none');
-  const [isVisible, setTVisible] = useState(true);
-  const [titleText, setTitleText] = useState(heroes[0].title);
-  const [paramText, setParamText] = useState(heroes[0].text);
 
-  const currentText = heroes[mainSlide].text;
+  const [isVisible, setVisible] = useState(true);
+  const [text, setText] = useState(heroes[0].text);
 
   useEffect(() => {
-    setTVisible(false);
+    setVisible(false);
     setTimeout(() => {
-      setTitleText(heroes[mainSlide].title);
-      setParamText(heroes[mainSlide].text);
-      setTVisible(true);
+      setText(heroes[mainIndex].text);
+      setVisible(true);
     }, 200);
-  }, [mainSlide]);
+  }, [mainIndex]);
 
   const slideRight = () => {
     //prettier-ignore
-    const nextSlide = mainSlide === (heroes.length - 1) 
+    const nextSlide = mainIndex === (heroes.length - 1) 
         ? 0 
-        : mainSlide + 1;
+        : mainIndex + 1;
 
     setDirection('right');
-    setSecondSlide(mainSlide);
-    setMainSlide(nextSlide);
-
-    setTVisible(false);
-    setTimeout(() => {
-      setTVisible(true);
-    }, 200);
+    setsecondIndex(mainIndex);
+    setmainIndex(nextSlide);
   };
 
   const slideLeft = () => {
     //prettier-ignore
-    const nextSlide = mainSlide === 0 
+    const nextSlide = mainIndex === 0 
         ? heroes.length - 1
-        : mainSlide - 1;
+        : mainIndex - 1;
 
     setDirection('left');
-    setSecondSlide(mainSlide);
-    setMainSlide(nextSlide);
+    setsecondIndex(mainIndex);
+    setmainIndex(nextSlide);
   };
 
   return (
     <section className={styles.interactive}>
       <div className={styles.slider_container}>
         <Slider
-          mainSlide={mainSlide}
-          secondSlide={secondSlide}
+          mainIndex={mainIndex}
+          secondIndex={secondIndex}
           heroes={heroes}
           direction={direction}
           slideLeft={slideLeft}
@@ -67,8 +59,8 @@ const Interactive = () => {
       </div>
 
       <div className={styles.article_container}>
-        <h1 className={`${styles.title} ${isVisible ? styles.visible : ''}`}>{titleText}</h1>
-        <p className={`${styles.text} ${isVisible ? styles.visible : ''}`}>{paramText}</p>
+        <h1 className={`${styles.title} ${isVisible ? styles.visible : ''}`}>{text.title}</h1>
+        <p className={`${styles.text} ${isVisible ? styles.visible : ''}`}>{text.param}</p>
         <Stepper onStepRight={slideRight} onStepLeft={slideLeft} />
       </div>
     </section>
