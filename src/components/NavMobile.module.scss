@@ -1,0 +1,50 @@
+@use '../styles/config/' as *;
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: hsla(0 0 0 / 0.6);
+  opacity: 0;
+  transition: opacity 100ms ease-in-out;
+}
+
+.nav_section {
+  @include font-base-semi-bold;
+  background: white;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  padding-left: 26px;
+  padding-right: 20px;
+}
+
+.list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 1.175rem;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.list_item {
+  display: inline-block;
+}
+
+.close {
+  background: none;
+  border: none;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.visible {
+  opacity: 1;
+}

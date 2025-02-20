@@ -1,10 +1,15 @@
 @use './styles/config/' as *;
 
 .app {
+  @include font-base-regular;
+  max-width: 2000px;
+  margin: 0 auto;
   height: 100%;
   min-height: 800px;
   display: flex;
   flex-direction: column;
 
-  @include font-base-regular;
+  @media (max-width: $breakpoint-mobile) {
+    display: revert;
+  }
 }

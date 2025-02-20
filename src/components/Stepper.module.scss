@@ -8,6 +8,16 @@
   bottom: 0;
   left: 0;
   display: flex;
+
+  @media (max-width: $breakpoint-mobile) {
+    left: revert;
+    bottom: revert;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    width: 8rem;
+    height: 4rem;
+  }
 }
 
 .stepper:hover {

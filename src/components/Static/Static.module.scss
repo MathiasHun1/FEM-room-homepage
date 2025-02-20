@@ -4,11 +4,15 @@
   flex: calc(1 / 3);
   width: 100%;
   display: flex;
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
 }
 
 .static__image {
   flex: 1;
-  flex-shrink: 2222222;
+  flex-shrink: 999999999;
   flex-basis: 300px;
 
   img {

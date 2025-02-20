@@ -15,8 +15,11 @@
   display: grid;
   grid-template-columns: 1fr 40%;
   flex: calc(2 / 3);
-
   overflow: hidden;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .slider_container {
@@ -47,5 +50,15 @@
 
   .visible {
     opacity: 1;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    min-height: 40vh;
+
+    .title {
+      font-size: calc(40rem / 16);
+    }
   }
 }
