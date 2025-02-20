@@ -10,9 +10,25 @@
   display: flex;
 }
 
+.stepper:hover {
+  cursor: pointer;
+}
+
 .left_arrow,
 .right_arrow {
   width: 100%;
   display: grid;
   place-items: center;
+  position: relative;
+}
+
+.left_arrow:hover::after,
+.right_arrow:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsla(0 0 100 / 0.2);
 }

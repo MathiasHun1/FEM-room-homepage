@@ -2,7 +2,9 @@ import styles from './Slider.module.scss';
 
 import Stepper from './Stepper';
 
-const Slider = ({ currentSlides, direction }) => {
+const Slider = ({ mainSlide, secondSlide, direction, heroes }) => {
+  const currentSlides = [heroes[mainSlide], heroes[secondSlide]];
+
   return (
     <div className={styles.slider}>
       {currentSlides.map((slide) => (

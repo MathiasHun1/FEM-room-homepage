@@ -1,7 +1,5 @@
 import styles from './App.module.scss';
 
-import Navbar from './components/Navbar';
-import Slider from './components/Slider';
 import Interactive from './components/Interactive/Interactive';
 
 function App() {
