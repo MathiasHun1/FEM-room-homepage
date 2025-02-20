@@ -80,6 +80,9 @@ $color: $clr-White;
   background: none;
   border: none;
   width: 30px;
+  position: relative;
+  z-index: 999;
+  min-width: 30px;
   transform: translateX(-100%);
   @media (min-width: $breakpoint-mobile) {
     display: none;

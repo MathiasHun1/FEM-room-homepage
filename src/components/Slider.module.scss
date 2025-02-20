@@ -55,17 +55,17 @@
 }
 
 .right:first-of-type {
-  animation: slideIn 1000ms ease-in-out;
+  animation: slideIn 500ms ease-in-out;
 }
 
 .right:last-of-type {
-  animation: slideOut 1000ms ease-in-out;
+  animation: slideOut 500ms ease-in-out;
 }
 
 .left:first-of-type {
-  animation: slideIn-reverse 1000ms ease-in-out;
+  animation: slideIn-reverse 500ms ease-in-out;
 }
 
 .left:last-of-type {
-  animation: slideOut-reverse 1000ms ease-in-out;
+  animation: slideOut-reverse 500ms ease-in-out;
 }
