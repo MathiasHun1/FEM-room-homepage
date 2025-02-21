@@ -10,13 +10,14 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={styles.nav_element}>
+    <nav className={styles.nav_element} aria-label="navigation menu">
       <div className={styles.logo_wrapper}>
-        <button className={styles.hamburger} onClick={() => setIsOpen(true)}>
+        {/* leave the 'alt' empty because the icon is decorative */}
+        <button className={styles.hamburger} onClick={() => setIsOpen(true)} aria-label="open navigation">
           <img src={hamburgerIcon} alt="" />
         </button>
         <div className={styles.logo}>
-          <img src={logo} alt="" />
+          <img src={logo} alt="Room" />
         </div>
       </div>
 

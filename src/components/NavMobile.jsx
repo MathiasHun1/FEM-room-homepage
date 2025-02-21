@@ -20,9 +20,7 @@ const NavMobile = ({ setIsOpen }) => {
         handleClose();
       }
     };
-
     window.addEventListener('mousedown', handleOutsideClick);
-
     return () => {
       window.removeEventListener('mousedown', handleOutsideClick);
     };
@@ -41,7 +39,7 @@ const NavMobile = ({ setIsOpen }) => {
   return (
     <div className={`${styles.overlay} ${isVisible ? styles.visible : ''}`}>
       <div ref={navRef} className={styles.nav_section}>
-        <button className={styles.close} onClick={handleClose}>
+        <button className={styles.close} onClick={handleClose} aria-label="close navigation menu">
           <img src={closeIcon} alt="" />
         </button>
         <ul className={styles.list}>

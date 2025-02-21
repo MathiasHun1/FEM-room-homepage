@@ -66,6 +66,14 @@ h6 {
   isolation: isolate;
 }
 
+/*
+  10. Reset some button base styles
+*/
+button {
+  border: none;
+  background: none;
+}
+
 html,
 body,
 #root {
